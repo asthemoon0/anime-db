@@ -1,0 +1,151 @@
+nav {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  height: 100%;
+
+  width: 24rem;
+  background-color: #0b132b;
+
+  & h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #858995;
+  }
+}
+
+// Logo styles
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  & .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  & h1 {
+    color: #fff;
+  }
+}
+
+// Browse styles
+.browse {
+  margin-top: 6rem;
+  margin-left: 4rem;
+  & h3 {
+    margin-bottom: 3rem;
+  }
+  & ul li {
+    list-style: none;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  & ul li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.browse {
+  & ul li:first-child {
+    color: #6fffe9;
+  }
+}
+
+.browse {
+  & ul::before {
+    position: relative;
+  }
+  & li.active::before {
+    content: '';
+    width: 0.4rem;
+    height: 2.5rem;
+    position: absolute;
+    left: 0px;
+    background-color: #6fffe9;
+  }
+}
+
+// Catergories styles
+.category {
+  margin-top: 15rem;
+  margin-left: 4rem;
+  & h3 {
+    margin-bottom: 3rem;
+  }
+
+  & ul li {
+    list-style: none;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1053px) {
+  nav {
+    display: none;
+  }
+  .menu-toggle {
+    width: 35px;
+    height: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+
+    cursor: pointer;
+    & .one,
+    .two,
+    .three {
+      background-color: #fff;
+      height: 3px;
+      width: 100%;
+    }
+
+    & .two,
+    .three {
+      margin: 6px 0;
+    }
+  }
+
+  .menu-section {
+    height: 50px;
+  }
+
+  .menu-section.on {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #0b132b;
+    z-index: 10;
+
+    nav {
+      display: block;
+      margin-top: 100px;
+
+      .logo {
+        display: none;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+      & ul li {
+        font-size: 2.3rem;
+      }
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.content-container-genre-list {
+  width: 100%;
+  padding: 0 10px 0 10px;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+  & .genreTitle {
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+}
+.list-container--genres {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  grid-gap: 15px;
+
+  & .card-image {
+    height: 235px;
+  }
+}
+
+.content-container-genre-list .container {
+  margin: 0 auto;
+}

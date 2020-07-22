@@ -1,0 +1,166 @@
+.main-container {
+  display: flex;
+  background-color: #1c2541;
+  min-height: 100vh;
+}
+.content-container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: 10rem auto;
+  max-width: 960px;
+}
+
+.container {
+  max-width: 960px;
+}
+.hero .container {
+  display: flex;
+}
+.hero-img {
+  img {
+    height: 40rem;
+  }
+}
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5rem;
+  & .hero-description--title {
+    max-width: 510px;
+    h1 {
+      font-size: 4.8rem;
+      color: #fff;
+    }
+  }
+  & .hero-description--text {
+    //margin-top: 4rem;
+    width: 45rem;
+    p {
+      font-size: 1.8rem;
+      line-height: 1.56;
+      color: #fff;
+    }
+  }
+  & .hero-description--watch {
+    display: flex;
+    align-items: center;
+    & img {
+      margin-left: 1rem;
+      width: 32px;
+      height: px;
+    }
+    & h3 {
+      color: #fff;
+    }
+  }
+}
+.trailer {
+  margin-top: 5rem;
+  h1 {
+    margin-bottom: 3rem;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.trailer .container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.characters .container {
+  margin-top: 50px;
+}
+
+.list-container--chars {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+
+  grid-gap: 15px;
+}
+
+.card {
+  text-align: center;
+  padding: 1rem;
+  background-color: #232e4f;
+
+  cursor: pointer;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    object-fit: cover;
+  }
+
+  & .card-image {
+    height: 210px;
+
+    object-fit: cover;
+  }
+
+  & .card-info {
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+    color: #fff;
+
+    & .card-info__role {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: #0b132b;
+    }
+  }
+}
+.characters-outOfChars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & img {
+    margin-top: 20px;
+    height: 200px;
+    border-radius: 20px;
+  }
+}
+.characters-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;;
+}
+
+@media screen and (max-width: 1053px) {
+  .main-container {
+    display: block;
+  }
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-description {
+    margin: 20px 0;
+
+    & .hero-description--text {
+      margin-top: 10px;
+    }
+    & .hero-description--watch {
+      margin-top: 10px;
+    }
+  }
+}
